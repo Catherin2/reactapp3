@@ -23,7 +23,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "homepage": "https://a3reactapps-c7csbpccgxh8a8ht.canadacentral-01.azurewebsites.net/"
   },
   "eslintConfig": {
     "extends": [
