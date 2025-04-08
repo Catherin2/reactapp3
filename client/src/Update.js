@@ -5,7 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 function Update() {
     const { id } = useParams();
 
-    const [values, setValues] = React.useState({
+    const [values, setValues] = useState({
         name: "",
         phone: "",
         role: ""
