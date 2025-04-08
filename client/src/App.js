@@ -3,6 +3,8 @@ import Member from './Member';
 import Navbar from './Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
+import Create from './Create';
+import Update from './Update';
 
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Member />}></Route>
+          <Route path='/create' element={<Create />}></Route>
+          <Route path='/update/:id' element={<Update />}></Route>
         </Routes>
       </BrowserRouter>
 
