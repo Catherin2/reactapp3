@@ -32,8 +32,8 @@ function Update() {
                     }
                 }
             )
-            .then((res) => setValues({
-                ...values, name: res.data[0].name,
+            .then((res) => ({
+                name: res.data[0].name,
                 phone: res.data[0].phone,
                 role: res.data[0].role
             })
@@ -51,7 +51,6 @@ function Update() {
                         type="text"
                         placeholder="Name..."
                         className="form-control"
-                        value={values.name}
                         onChange={(e) => setName(e.target.value)}
                     />
                 </div>
@@ -61,7 +60,6 @@ function Update() {
                         type="int"
                         placeholder="Phone..."
                         className="form-control"
-                        value={values.phone}
                         onChange={(e) => setPhone(e.target.value)}
                     />
                 </div>
@@ -71,7 +69,6 @@ function Update() {
                         type="text"
                         placeholder="Role..."
                         className="form-control"
-                        value={values.role}
                         onChange={(e) => setRole(e.target.value)}
                     />
                 </div>
