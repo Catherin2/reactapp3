@@ -5,18 +5,15 @@ import { useNavigate, useParams } from "react-router-dom";
 function Update() {
     const { id } = useParams();
 
-    const [values, setValues] = useState({
-        name: "",
-        phone: "",
-        role: ""
-    });
-
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [role, setRole] = useState("");
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
-            .put("mysglserver46.database.windows.net/create", values,
+            .put("mysglserver46.database.windows.net/create", { name, phone, role },
                 {
                     headers: {
                         'Content-Type': 'application/json'
