@@ -59,7 +59,7 @@ const Create = () => {
                             onChange={(e) => setRole(e.target.value)}
                         />
                     </div>
-                    <button type="submit" class="btn btn-secondary mt-3">Submit</button>
+                    <button type="submit" className="btn btn-secondary mt-3">Submit</button>
                 </form>
             </div>
         </div>
