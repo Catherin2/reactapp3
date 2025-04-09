@@ -24,7 +24,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "homepage": "https://a3reactapps-c7csbpccgxh8a8ht.canadacentral-01.azurewebsites.net/"
+    "homepage": "https://github.com/Catherin2/reactapp3"
   },
   "eslintConfig": {
     "extends": [
