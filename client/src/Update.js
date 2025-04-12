@@ -34,6 +34,7 @@ function Update() {
                 }
             )
             .then((res) => ({
+                id: res.data[0].id,
                 name: res.data[0].name,
                 phone: res.data[0].phone,
                 role: res.data[0].role
