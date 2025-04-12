@@ -4,13 +4,10 @@ import { useNavigate, useParams } from "react-router-dom";
 
 function Update() {
     const { id } = useParams();
-
-
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [role, setRole] = useState("");
     const navigate = useNavigate();
-
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
@@ -20,13 +17,15 @@ function Update() {
                         'Content-Type': 'application/json'
                     }
                 })
-            .then(res => navigate('/'))
+            .then(res => {
+                console.log(res);
+                navigate("/");
+            })
             .catch((err) => console.log(err))
     }
-
     useEffect(() => {
         axios
-            .get("/mysglserver46.database.windows.net/getrecord/" + id,
+            .get("/mysglserver46.database.windows.net/getrecord", +id,
                 {
                     headers: {
                         'Content-Type': 'application/json'
