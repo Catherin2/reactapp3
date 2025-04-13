@@ -43,6 +43,10 @@ export default function Member() {
                                 <td>{members.name}</td>
                                 <td>{members.phone}</td>
                                 <td>{members.role}</td>
+                                <td>
+                                    <Link to={'/update/${members.id}'} type="button" className="btn btn-info btn-sm me-e">Update</Link>
+                                    <button type="button" onClick={() => handleDelete(members.id)} className="btn btn-danger btn-sm me-e">Update</button>
+                                </td>
                             </tr>
                         ))}
                 </tbody>
