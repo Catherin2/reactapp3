@@ -37,9 +37,9 @@ export default function Member() {
                 <tbody>
                     {member &&
                         member.map &&
-                        member.map((members, id) => (
-                            <tr key={members.id}>
-                                <td>{id}</td>
+                        member.map((members, index) => (
+                            <tr key={index}>
+                                <td>{members.id}</td>
                                 <td>{members.name}</td>
                                 <td>{members.phone}</td>
                                 <td>{members.role}</td>
