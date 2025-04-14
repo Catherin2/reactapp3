@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import { Link } from 'react-router-dom'
 
 export default function Member() {
 
@@ -20,7 +20,17 @@ export default function Member() {
             .then(res => setMember(res.data))
             .catch(err => console.log(err.message))
     }, []);
-
+    // delete record
+    const handleDelete = (id) => {
+        axios.delete('mysglserver46.database.windows.net/' + id,
+            {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(res => windows.location.reload())
+            .catch(err => console.log(err.message));
+    }
 
     return (
         <div className="container m-5">
