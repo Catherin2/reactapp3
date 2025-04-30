@@ -8,16 +8,16 @@ export default function Member() {
         name: "",
         phone: "",
         role: ""
-    })
+    });
     //display  data record
     useEffect(() => {
-        axios.get('Driver={ODBC Driver 18 for SQL Server};Server=tcp:mysglserver46.database.windows.net,1433;Database=grey;Uid=azureuser;Pwd={8765432#A};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;',
+        axios.get('Driver={ODBC Driver 18 for SQL Server};Server=tcp:mysglserver46.database.windows.net,1433;Database=grey;Uid=azureuser;Pwd={8765432#A};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30', member,
             {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             })
-            .then(res => setMember(res.data))
+            .then(response => setMember(response.data.message))
             .catch(err => console.log(err.message))
     }, []);
     // delete record
@@ -28,7 +28,7 @@ export default function Member() {
                     'Content-Type': 'application/json'
                 }
             })
-            .then(res => windows.location.reload())
+            .then(response => window.location.reload())
             .catch(err => console.log(err.message));
     }
 
